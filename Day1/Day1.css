@@ -1,0 +1,25 @@
+body{
+    margin: 0 auto;
+    text-align: center;
+}
+ol{
+    background-color: blueviolet;
+    padding: 3px 5px;
+}
+
+ol > li{
+    display: inline;
+    background-color: pink;
+} 
+
+ul{
+    background-color: red;
+}
+
+#hello{
+    color: white;
+}
+
+.hello2{
+    color: blue;
+}
