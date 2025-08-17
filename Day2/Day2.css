@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+/* * {
+    color: purple;
+    background-color: burlywood;
+} */
+
+/* body {
+    color: bisque;
+    background-color: black;
+} */
+
+h1 {
+    color: aquamarine;
+}
+/* #para>p{
+    color: blueviolet;
+} */
+
+/* .para > p{
+    color:red;
+} */
+p{
+    display: inline-block;
+    height: 50px;
+}
+
+.align{
+    font-family: "Cedarville Cursive",
+        cursive;
+    text-align: right;
+    text-decoration: underline wavy;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 30px;
+    /* background-color: red; */
+    color: white;
+    background-image: linear-gradient(rgba(65, 65, 65, 0.096), rgba(48, 48, 48, 0.068)),
+    url("../assets/mountain-landscape-5120x2880-21066.jpg");
+   
+    background-size: contain;
+    /* background-size: contain; */
+   
+/* fontsize */
+/* em -> parent child relation of font;
+rem -> body element relation of font */
+padding: 10px 20px
+}
