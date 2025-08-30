@@ -1,0 +1,47 @@
+.container{
+    display: flex;
+    gap: 20px;
+    margin: 50px;
+    background-color: yellow;
+}
+
+body{
+    height: 2000px;
+}
+
+.wrapper{
+    /* position: relative; */
+    margin: 50px;
+    background-color: black;
+    height: 200px;
+}
+
+.box{
+    width: 150px;
+    height: 100px;
+    padding: 10px;
+}
+
+.left, .right{
+    background: gray;
+}
+
+.middle{
+    position: relative;
+     /* relative shifts from its original position */
+    /* by deault static value and no top, right applied */
+    /* absolute adjusts its content according to any position applied to its closest parent (or) position relative to its closest postion applied div, if not any present then it goes for <html> */
+    /* fixed takes its position according to body*/
+    background: red;
+    top: 0;
+    bottom: 0;
+    
+}
+
+.sticky{
+    position: sticky;
+    /*sticky makes the element fixed to a given position once achieved and will remain on the screen till its parent remains on screen*/
+    top: 10px;
+    background-color: black;
+    color: white;
+}
