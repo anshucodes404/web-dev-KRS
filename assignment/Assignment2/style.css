@@ -22,6 +22,7 @@ label {
 img {
     position: fixed;
     width: 50vw;
+    height: 100%;
     right: 0;
 }
 
@@ -93,4 +94,10 @@ textarea {
 
 select {
     width: 104%;
+}
+
+.hover:hover{
+    background-color: #8103b7;
+    transform: scale(1.04);
+    transition: all 0.2s;
 }

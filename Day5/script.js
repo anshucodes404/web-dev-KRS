@@ -23,10 +23,8 @@ function greet() {
     console.log("Hello World")
 }
 
-
-
 let hello = () => {
-    console.log("I am arrow") //hoisted as temporal dead zone
+    console.log("I am arrow") //hoisted as temporal dead zone means error will be cannot use before initialization
 }
 
 var hello2 = () => {
@@ -47,3 +45,12 @@ function greet2() {
     console.log(d) //undefined b/c d is assigned after greet2 is called
     // greet2()
 }
+
+var g = 10;
+
+for (let i = 0; i < 2; i++){
+    console.log(g);
+}
+
+console.log(i)
+
