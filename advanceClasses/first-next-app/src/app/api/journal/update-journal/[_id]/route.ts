@@ -6,7 +6,6 @@ export async function PATCH(req: NextRequest, {params}: {params: {_id: string}})
    try {
 
     await dbConnect()
-     console.log(params._id)
      const body = await req.json()
 
      if(!params._id || !body){
