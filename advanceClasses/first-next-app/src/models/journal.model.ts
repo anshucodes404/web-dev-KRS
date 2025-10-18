@@ -13,7 +13,7 @@ export interface IJournal extends Document {
 
 export const journalSchema: Schema<IJournal> = new Schema(
   {
-    userId: {type: Schema.Types.ObjectId, ref: "User"},
+    userId: {type: Schema.Types.ObjectId, ref: "User", required: true},
     title: { type: String, required: true },
     mood: { type: String, enum:["happy", "sad", "neytral", "angry", "awesome", "tired", "confused", "scared"] },
     content: { type: String, required: true },

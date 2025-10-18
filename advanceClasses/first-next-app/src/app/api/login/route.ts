@@ -1,10 +1,9 @@
 import dbConnect from "@/utils/dbConnect";
 import { NextRequest, NextResponse } from "next/server";
 import z from "zod";
-import User, { IUser } from "@/models/user.model";
+import User from "@/models/user.model";
 import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
-import { cookies } from "next/headers";
+import jwt from "jsonwebtoken"
 
 const reqSchema = z.object({
   email: z.email(),
@@ -14,8 +13,7 @@ const reqSchema = z.object({
     .max(20, "Max length 20 for password"),
 });
 
-export async function GET(req: NextRequest) {
-    const cookieStore = cookies()
+export async function POST(req: NextRequest) {
   try {
     await dbConnect();
 
@@ -35,7 +33,7 @@ export async function GET(req: NextRequest) {
 
     const { email, password } = parsedBody.data;
 
-    const user = (await User.findOne({ email })) as IUser;
+    const user = (await User.findOne({ email }))
     console.log(user);
     if (!user) {
       console.error("User not found");
@@ -81,13 +79,14 @@ export async function GET(req: NextRequest) {
       secure: true,
     };
 
-    (await cookieStore).set("token", token, options)
-
-    return NextResponse.json({
+    const response = NextResponse.json({
       success: true,
       message: "User logged in successfully",
       data: user,
     }, {status: 200});
+
+    response.cookies.set("token", token, options)
+    return response
   } catch (error) {
     console.error("Failure while logging in");
     return NextResponse.json(
